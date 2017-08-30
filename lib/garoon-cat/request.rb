@@ -57,7 +57,7 @@ class GaroonCat::Request
       target.each do |key, v1|
         case v1
         when String
-          parameters.add_element(key.to_s).add_text(v1.to_s)
+          parameters.add_attribute(key.to_s, v1.to_s)
         when Array
           v1.each do |v2|
             parameters.add_element(key.to_s).add_text(v2.to_s)
